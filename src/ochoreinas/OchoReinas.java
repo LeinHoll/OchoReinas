@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class OchoReinas {
     
-    //static Tile[][] tablero = new Tile[8][8];
     static ArrayList<Tile> tablero = new ArrayList();
     static ArrayList<Tile> reinas = new ArrayList();
     static int incremento = 1;
@@ -117,80 +116,5 @@ public class OchoReinas {
         }
         return "   |";
     }
-    
-/*    static void buildTablero(){
-        for(int fil = 0 ; fil < 8 ; fil++){
-            for(int col = 0 ; col < 8 ; col++){
-                tablero[fil][col] = new Tile();
-            }
-        }
-    }
-    
-    static void drawTablero(){
-        for(int fil = 0 ; fil < 8 ; fil++){
-            for(int col = 0 ; col < 8 ; col++){
-                if(tablero[fil][col].reina)
-                    System.out.print("| A ");
-                else{                    
-                    if(!tablero[fil][col].green)
-                        System.out.print("| D ");
-                    else
-                        System.out.print("|   ");
-                }
-            }
-            System.out.println("");
-        }
-    }
-    
-    static void randoReina(){
-        while(true){
-            int rFil = (int) Math.round(7 * Math.random());
-            int rCol = (int) Math.round(7 * Math.random());
-            
-            if(tablero[rFil][rCol].green){
-                tablero[rFil][rCol].green = false;
-                tablero[rFil][rCol].reina = true;
-                
-                killZone(rFil, rCol);
-                break;
-            }
-        }
-    }
-        
-    static void killZone(int fil, int col){
-        //kill column
-        for(int x = 0 ; x < 8 ; x++){
-            tablero[x][col].green = false;
-        }
-        //kill line
-        for(int y = 0 ; y < 8 ; y++){
-            tablero[fil][y].green = false;
-        }
-        //kill bottom diagonals
-        int yMinus = col;
-        int yPlus = col;
-        for(int x = fil + 1 ; x < 8 ; x++){
-            yMinus--;
-            yPlus++;
-            if(yMinus >= 0 ){
-                tablero[x][yMinus].green = false;
-            }
-            if(yPlus < 8 ){
-                tablero[x][yPlus].green = false;
-            }
-        }
-        //kill upper diagonals
-        yMinus = col;
-        yPlus = col;
-        for(int x = fil - 1 ; x >= 0 ; x--){
-            yMinus--;
-            yPlus++;
-            if(yMinus >= 0 ){
-                tablero[x][yMinus].green = false;
-            }
-            if(yPlus < 8 ){
-                tablero[x][yPlus].green = false;
-            }
-        }
-    }*/
+   
 }
